@@ -46,7 +46,7 @@ if (window.top != window) {
 			window.biosUrl = '../bios/' + gameInfo.b + '.7z';
 		}
 		// ROM
-		window.gameUrl = "https://arcade-rom.heheda.top/" + gameInfo.i + ".7z";
+		window.gameUrl = "https://storage.heheda.top/ps-rom/" + gameInfo.i + ".7z";
 		// 初始化
 		window.EJS_player = "#show_box";
 		window.dataPath = "https://other.heheda.top/gamelib/";
