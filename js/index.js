@@ -3,7 +3,7 @@
 // 页面载入
 if (window.top != window) {
 	alert('当您看到这条提示意味着：您所访问的网站正在恶意调用本站资源，本站对偷盗资源的行为0容忍，点击确认跳转正版体验。');
-	window.open('https://gba.heheda.top', '_self');
+	window.open('https://ps.heheda.top', '_self');
 } else if (window.location.href.indexOf('index') > -1) {
 	window.open('./', '_self');
 };
@@ -40,7 +40,7 @@ const intdata = () => {
 			for (let j = 0; j < data.length; j++) {
 				let span1 = data[j].v ? '<span class="item_p2">' + data[j].v + '</span>' : '';
 				let span2 = data[j].c ? '<span class="item_p3">' + data[j].c + '</span>' : '';
-				let opgamev = data[j].v ? '&v=' + data[j].v : '';
+				let opgamev = data[j].v ? '(' + data[j].v + ')' : '';
 				let gbios = data[j].b ? '&b=' + data[j].b : '';
 				let purl = encodeURI('./play/?n=' + data[j].n + opgamev + gbios + '&i=' + data[j].i);
 				item += '<a href="' + purl + '" title="' + data[j].n + '" target="_self"><div class="item">' +

@@ -15,7 +15,7 @@ const urlerr = () => {
 // 判断数据合法性
 if (window.top != window) {
 	alert('当您看到这条提示意味着：您所访问的网站正在恶意调用本站资源，本站对偷盗资源的行为0容忍，点击确认跳转正版体验。');
-	window.open('https://gba.heheda.top', '_self');
+	window.open('https://ps.heheda.top', '_self');
 } else if (urldata.indexOf('?') > -1 && urldata.indexOf('&') > -1 && urldata.indexOf('=') > -1) {
 	const urlarr = urldata.split('?')[1];
 	if (urldata.indexOf('index') > -1) {
@@ -32,11 +32,10 @@ if (window.top != window) {
 		cocoMessage.warning("正在配置资源！", 2000);
 		const showload = document.getElementById('btn_load');
 		//展示游戏名称
-		const gnm = !gameInfo.v ? '' : '(' + gameInfo.v + ')';
-		document.getElementById('name').innerHTML = gameInfo.n + gnm;
+		document.getElementById('name').innerHTML = gameInfo.n;
 		// 修改title
-		document.title = gameInfo.n + gnm + ' - ' + 'PS游戏盒';
-		window.gameName = gameInfo.n + gnm;
+		document.title = gameInfo.n + ' - ' + 'PS游戏盒';
+		window.gameName = gameInfo.n;
 		// 游戏ID
 		window.gameId = gameInfo.i;
 		// 封面
