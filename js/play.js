@@ -2,6 +2,7 @@
 "use strict";
 //获取游戏信息
 let gameInfo = {};
+let romUrl;
 const url = window.location.href;
 const urldata = decodeURI(url);
 //游戏状态
@@ -45,7 +46,9 @@ if (window.top != window) {
 			window.biosUrl = '../bios/' + gameInfo.b + '.7z';
 		}
 		// ROM
-		window.gameUrl = "https://storage.heheda.top/ps-rom/" + gameInfo.i + ".7z";
+		romUrl = (gameInfo.s ? "https://0.heheda.top/ps-roms/" : "https://storage.heheda.top/ps-rom/") + gameInfo.i +
+			".7z";
+		window.gameUrl = romUrl;
 		// 初始化
 		window.EJS_player = "#show_box";
 		window.dataPath = "https://other.heheda.top/gamelib/";
@@ -804,7 +807,7 @@ const dowrom = () => {
 	const dorom = confirm('您要下载此游戏的ROM文件吗？');
 	if (dorom == true) {
 		cocoMessage.warning("即将开始下载！", 2000);
-		window.open("https://storage.heheda.top/ps-rom/" + gameInfo.i + ".7z");
+		window.open(romUrl);
 	} else {
 		cocoMessage.warning("您取消了下载！", 2000);
 	}
