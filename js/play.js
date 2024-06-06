@@ -45,7 +45,9 @@ if (window.top != window) {
 			window.biosUrl = '../bios/' + gameInfo.b + '.7z';
 		}
 		// ROM
-		romUrl = "https://storage.heheda." + (gameInfo.s ? "cn" : "top") + "/ps-rom/" + gameInfo.i + ".7z";
+		romUrl = (gameInfo.s == "l" ? "../roms/" : "https://storage.heheda." + (gameInfo.s == "c" ? "cn" : "top") +
+				"/ps-rom/") +
+			gameInfo.i + ".7z";
 		window.gameUrl = romUrl;
 		// 初始化
 		window.EJS_player = "#show_box";
